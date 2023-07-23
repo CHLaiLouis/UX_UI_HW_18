@@ -1,135 +1,301 @@
- a, p, h1,h2{
-  font-family: 'SF Pro', Arial, Helvetica, sans-serif;
+ a,
+ p,
+ h1,
+ h2 {
+   font-family: 'SF Pro', Arial, Helvetica, sans-serif;
  }
 
-nav {
+ nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: #ffffff;
+   padding: 10px;
+   font-size: larger;
+ }
+
+ .logo img {
+   height: 80px;
+ }
+
+ .navlinks {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+ }
+
+ .navlinks li {
+   display: inline-block;
+ }
+
+ .navlinks li a {
+   display: inline-block;
+   padding: 10px 20px;
+   text-decoration: none;
+   color: #000;
+ }
+
+ .herosection {
+   margin: 120px 60px;
+   display: flex;
+   align-items: center;
+   font-size: 32px;
+   flex-direction: row;
+ }
+
+ .heroImg {
+   height: 464px;
+   margin-left: 40px;
+   cursor: pointer;
+ }
+
+ .myskillsection {
+   margin: 120px auto;
+   width: 50%;
+   font-size: 32px;
+ }
+
+ .navlinks_aboutme,
+ .navlinks_myworks {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: x-large;
+ }
+
+ footer {
+   background-color: #DFD7BF;
+   padding-top: 20px;
+   margin-top: 80px;
+ }
+
+ .letsconnect {
+   font-size: x-large;
+   margin-left: 40px;
+ }
+
+ footer ul {
+   display: flex;
+   align-items: flex-start;
+   justify-content: left;
+   width: 360px;
+   margin-bottom: 20px;
+ }
+
+ footer ul li {
+   list-style: none;
+   padding-right: 40px;
+ }
+
+ footer ul li img {
+   height: 40px
+ }
+
+ .myworksection {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin: 80px 46px 80px 46px;
+ }
+
+ .title_mywork {
+   font-size: 40px;
+ }
+
+
+
+ .work_profile {
+   grid-area: work_profile;
+   width: 680px;
+   border-radius: 8px;
+ }
+
+
+ .work_title {
+   font-size: 32px;
+   font-weight: 600;
+   grid-area: work_title;
+   padding: 0px 0px 0px 80px;
+   text-align: left;
+ }
+
+ .work_description {
+   font-size: 20px;
+   grid-area: work_description;
+   padding: 0px 40px 0px 80px;
+   text-align: left;
+ }
+
+ .work {
+   display: grid;
+   grid-template-columns: 680px 680px;
+   grid-template-rows: 1fr 1fr;
+   grid-template-areas:
+     "work_profile work_title"
+     "work_profile work_description";
+   padding: 40px;
+   margin: 12px;
+   background-color: #f5f5f5;
+   border-radius: 8px;
+   cursor: pointer;
+ }
+
+
+
+ @media only screen and (max-width:1200px) {
+
+  .work {
+    grid-template-columns: 600px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "work_profile"
+      "work_title"
+      "work_description";
+    padding: 20px;
+
+  }
+
+  .work_profile {
+    grid-area: work_profile;
+    width: 600px;
+    border-radius: 8px;
+    align-self: center;
+  }
+
+  .work_title {
+    font-size: 28px;
+    font-weight: 600;
+    grid-area: work_title;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+  }
+
+  .work_description {
+    font-size: 22px;
+    grid-area: work_description;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+  }
+
+  .navlinks_aboutme,
+  .navlinks_myworks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+  }
+
+  .herosection {
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    text-align: center;
+    flex-direction: column;
+    margin: 60px 30px;
+  }
+
+  .heroImg {
+    height: 400px;
+    cursor: pointer;
+
+  }
+
+  .myskillsection {
+    font-size: 28px;
+    width: 70%;
+    text-align: center;
+    margin: 60px auto;
+  }
+
+  .title_mywork {
+    font-size: 32px;
+  }
+
+  nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
     padding: 10px;
-    font-size: larger;
-  }
-  
-  .logo img {
-    height: 80px;
-  }
-  
-  .navlinks {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navlinks li {
-    display: inline-block;
-  }
-  
-  .navlinks li a {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #000;
-  }
-  
- .herosection{
-  margin: 120px 60px;
-  display: flex;
-  align-items: center;
-  font-size: 32px;
-  flex-direction: row;
- }
-
-  .heroImg{
-    height: 464px;
-    margin-left: 40px;
-    cursor: pointer;
+    font-size: 22px;
   }
 
-  .myskillsection{
-    margin: 120px auto;
-    width: 50%;
-    font-size: 32px;
+  .title_mywork {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width:600px) {
+
+  .work {
+    grid-template-columns: 400px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "work_profile"
+      "work_title"
+      "work_description";
+    padding: 20px;
+
   }
 
-  .navlinks_aboutme, .navlinks_allmyworks{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: x-large;
+  .work_profile {
+    grid-area: work_profile;
+    width: 400px;
+    border-radius: 8px;
+    align-self: center;
   }
 
-  footer{
-    background-color: #DFD7BF;
-    padding-top: 20px;
-    margin-top: 80px;
+  .work_title {
+    font-size: 24px;
+    font-weight: 600;
+    grid-area: work_title;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
   }
 
-  .letsconnect{
-    font-size: x-large;
-    margin-left: 40px;
+  .work_description {
+    font-size: 18px;
+    grid-area: work_description;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
   }
 
-  footer ul{
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
-    width: 360px;
-    margin-bottom: 20px;
-  }
-
-  footer ul li{
-    list-style: none;
-    padding-right: 40px;
-  }
-
-  footer ul li img{
-    height: 40px
-  }
-
-  .myworksection{
+  .navlinks_aboutme,
+  .navlinks_myworks {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
+  }
+
+  .herosection {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    text-align: center;
     flex-direction: column;
-    margin: 80px 46px 80px 46px;
+    margin: 60px 30px;
   }
 
-  .title_mywork{
-    font-size: xx-large;
+  .heroImg {
+    height: 200px;
+    cursor: pointer;
+
   }
 
-
-
-  .work_profile{
-    grid-area: work_profile;
-    width:680px;
+  .myskillsection {
+    font-size: 24px;
+    width: 70%;
+    text-align: center;
+    margin: 60px auto;
   }
 
-
- .work_title{
+  .title_mywork {
     font-size: 32px;
-    font-weight: 600;
-    grid-area: work_title;
-    padding: 0px 0px 0px 80px;
-    text-align: left;
   }
 
-  .work_description{
-    font-size: 20px;
-    grid-area: work_description;
-    padding: 0px 40px 0px 80px;
-    text-align: left;
+  nav {
+    font-size: 18px;
   }
-
-  .work {
-    display: grid;
-    grid-template-columns: 680px 680px;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-    "work_profile work_title"
-    "work_profile work_description";
-    padding: 10px;
-    margin: auto;
-  }
-
+}
