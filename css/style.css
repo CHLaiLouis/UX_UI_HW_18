@@ -1,3 +1,7 @@
+ a, p, h1,h2{
+  font-family: 'SF Pro', Arial, Helvetica, sans-serif;
+ }
+
 nav {
     display: flex;
     align-items: center;
@@ -32,21 +36,23 @@ nav {
   margin: 120px 60px;
   display: flex;
   align-items: center;
-  font-size: xx-large;
+  font-size: 32px;
+  flex-direction: row;
  }
 
   .heroImg{
     height: 464px;
     margin-left: 40px;
+    cursor: pointer;
   }
 
   .myskillsection{
     margin: 120px auto;
     width: 50%;
-    font-size: xx-large;
+    font-size: 32px;
   }
 
-  .navlinks_aboutme{
+  .navlinks_aboutme, .navlinks_allmyworks{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,3 +86,50 @@ nav {
   footer ul li img{
     height: 40px
   }
+
+  .myworksection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px 46px 80px 46px;
+  }
+
+  .title_mywork{
+    font-size: xx-large;
+  }
+
+
+
+  .work_profile{
+    grid-area: work_profile;
+    width:680px;
+  }
+
+
+ .work_title{
+    font-size: 32px;
+    font-weight: 600;
+    grid-area: work_title;
+    padding: 0px 0px 0px 80px;
+    text-align: left;
+  }
+
+  .work_description{
+    font-size: 20px;
+    grid-area: work_description;
+    padding: 0px 40px 0px 80px;
+    text-align: left;
+  }
+
+  .work {
+    display: grid;
+    grid-template-columns: 680px 680px;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "work_profile work_title"
+    "work_profile work_description";
+    padding: 10px;
+    margin: auto;
+  }
+
